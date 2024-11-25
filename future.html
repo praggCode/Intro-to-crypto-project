@@ -19,7 +19,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      background: #222;
+      background: #c38742;
       padding: 10px 20px;
       z-index: 1000;
     }
@@ -33,7 +33,7 @@
       margin: 0 15px;
       font-size: 18px;
       padding: 10px 15px;
-      border-radius: 5px;
+      border-radius: 10px;
       transition: background 0.3s;
     }
     header nav a:hover {
@@ -43,35 +43,76 @@
       height: 100vh;
       padding: 50px 20px;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
     }
     #page1 {
-      background: #f3f4f6;
+  position: relative; ; 
+  background-size: cover; 
+  background-position: center; 
+}
+
+    #page1 p {
+  position: relative;
+  z-index: 2;
+  color: white; 
+  background: rgba(0, 0, 0, 0.7); 
+  padding: 15px; 
+  border-radius: 10px;
+  font-size: 25px;
+  margin-left: 70px;
+}
+   #futh1{font-size: 35px;}
+
+   #page1 h1 {
+  position: relative;
+  z-index: 2;
+  color: white; 
+  background: rgba(0, 0, 0, 0.7); 
+  padding: 10px; 
+  border-radius: 10px; 
+}
+#futdivh{margin:auto;}
+#futdivp{margin-top: 140px;}
+
+
+#page2 {
+  background: #e9f6f0; 
+}
+
+#page2lis{margin-left: -240px;
+margin-top:110px;}
+
+#page2h1{font-size: 45px;}
+
+li{font-size: 30px;margin-bottom: 40px;}
+    
+    
+#page3 {
+  background: #fef6e4;
     }
-    #page2 {
-      background: #d1e7dd;
+#page4 {
+background: #e9ecef;
+  }
+#page5 {
+background: #f8d7da;
+  }
+    
+  
+footer {
+  background: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
     }
-    #page3 {
-      background: #fef6e4;
-    }
-    #page4 {
-      background: #e9ecef;
-    }
-    #page5 {
-      background: #f8d7da;
-    }
-    footer {
-      background: #222;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+
+
+
+
+
   </style>
 </head>
 <body>
-  <header>
+
+  <header id ="header">
     <nav>
       <a href="#page1">Crypto Future</a>
       <a href="#page2">5 Points</a>
@@ -80,24 +121,41 @@
       <a href="#page5">Conclusion</a>
     </nav>
   </header>
+
+
   <section id="page1">
-    <h1>Cryptocurrency: The Future of Finance</h1>
-    <p>
-      Cryptocurrency has revolutionized the financial world by introducing a decentralized,
-      secure, and transparent system for transactions. With blockchain technology, it is
-      paving the way for a new era of digital money.
+      <div id="futdivh"><h1 id="futh1">Cryptocurrency: The Future of Finance</h1></div>
+    <div id="futdivp"><p id="futpara"> 
+      <p>
+        Cryptocurrency has revolutionized the financial world by introducing a decentralized, secure, and transparent system for transactions. 
+        With blockchain technology, it is paving the way for a new era of digital money. Unlike traditional banking, cryptocurrencies enable direct peer-to-peer transactions, reducing costs and delays.
+      </p>
+      
+      <p>
+        The transparency of blockchain ensures that all transactions are publicly recorded, enhancing trust and reducing fraud. Additionally, cryptocurrencies provide global accessibility, empowering individuals without access to traditional financial services. 
+      </p>
+      
+      <p>
+        With innovations like smart contracts and decentralized finance, the impact of cryptocurrency is expanding, shaping the future of financial systems worldwide.
+      </p>
     </p>
-  </section>
-  <section id="page2">
-    <h1>5 Valid Points About Cryptocurrency</h1>
-    <ul>
-      <li>Decentralized and Transparent</li>
-      <li>Secure Transactions with Blockchain</li>
-      <li>Low Transaction Fees Compared to Banks</li>
-      <li>Access to Global Financial Systems</li>
-      <li>Potential for High Returns on Investment</li>
-    </ul>
-  </section>
+    </div>
+   
+    </section>
+
+
+    <section id="page2">
+      <h1 id="page2h1">Things to Consider</h1>
+      <div id="page2lis"><ul>
+        <li>Decentralized and Transparent</li>
+        <li>Secure Transactions with Blockchain</li>
+        <li>Low Transaction Fees Compared to Banks</li>
+        <li>Access to Global Financial Systems</li>
+        <li>Potential for High Returns on Investment</li>
+      </ul></div>
+    </section>
+
+
   <section id="page3">
     <h1>Top Entrepreneurs' Thoughts About Cryptocurrency</h1>
     <p>
@@ -108,6 +166,8 @@
       <strong>Chamath Palihapitiya:</strong> "Bitcoin is the single best hedge against traditional financial systems."
     </p>
   </section>
+
+
   <section id="page4">
     <h1>Upcoming Technologies in Cryptocurrency</h1>
     <ul>
@@ -118,6 +178,8 @@
       <li>Green Blockchain Initiatives</li>
     </ul>
   </section>
+
+  <!-- Page 5: Conclusion -->
   <section id="page5">
     <h1>Conclusion</h1>
     <p>
@@ -126,6 +188,8 @@
       shaping the future of finance, governance, and society.
     </p>
   </section>
+
+  <!-- Footer -->
   <footer>
     <p>© 2024 Crypto Insights. All rights reserved.</p>
   </footer>
