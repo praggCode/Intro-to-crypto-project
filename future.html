@@ -19,7 +19,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      background: #c38742;
+      background: #161615;
       padding: 10px 20px;
       z-index: 1000;
     }
@@ -44,10 +44,18 @@
       padding: 50px 20px;
       display: flex;
     }
-    #page1 {
-  position: relative; ; 
-  background-size: cover; 
-  background-position: center; 
+    #page1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('saw project img 1.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    filter: blur(10px); 
+    z-index: 1; 
 }
 
     #page1 p {
@@ -75,20 +83,30 @@
 
 
 #page2 {
-  background: #e9f6f0; 
+  background: #d1e7dd; 
 }
 
 #page2lis{margin-left: -240px;
-margin-top:110px;}
+margin-top:150px;}
 
-#page2h1{font-size: 45px;}
+#page2h1{font-size: 45px;margin-top: 40px;}
 
 li{font-size: 30px;margin-bottom: 40px;}
     
     
 #page3 {
   background: #fef6e4;
+  
     }
+
+
+
+
+
+
+
+
+
 #page4 {
 background: #e9ecef;
   }
@@ -159,8 +177,8 @@ footer {
   <section id="page3">
     <h1>Top Entrepreneurs' Thoughts About Cryptocurrency</h1>
     <p>
-      <strong>Elon Musk:</strong> "Cryptocurrency is a far better way to transfer value than pieces of paper."<br>
-      <strong>Bill Gates:</strong> "Bitcoin is a technological tour de force."<br>
+      <div style="margin-left: -200px;margin-top: 170px; align-items: center;height:auto;width:auto;border: solid black 1px;"><h2 style="margin-bottom: 20px;">Elon Musk:</h2> "Cryptocurrency is a far better way to transfer value than pieces of paper."<br></div>
+      <div><strong>Bill Gates:</strong> "Bitcoin is a technological tour de force."<br></div>
       <strong>Jack Dorsey:</strong> "The Internet needs a native currency, and Bitcoin is the best candidate."<br>
       <strong>Vitalik Buterin:</strong> "Ethereum extends blockchain technology to a wider variety of applications."<br>
       <strong>Chamath Palihapitiya:</strong> "Bitcoin is the single best hedge against traditional financial systems."
@@ -179,7 +197,7 @@ footer {
     </ul>
   </section>
 
-  <!-- Page 5: Conclusion -->
+ 
   <section id="page5">
     <h1>Conclusion</h1>
     <p>
@@ -189,7 +207,6 @@ footer {
     </p>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2024 Crypto Insights. All rights reserved.</p>
   </footer>
