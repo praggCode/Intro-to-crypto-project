@@ -10,7 +10,6 @@ Welcome to the **Learn Cryptocurrency** project! This webpage is a comprehensive
 - **Comprehensive Topics**:
   - What is Cryptocurrency?
   - How it Works (Blockchain, Mining, Wallets)
-  - Types of Cryptocurrencies (Bitcoin, Ethereum, Altcoins, etc.)
   - Buying and Selling Cryptocurrency
   - Security Best Practices
   - Benefits and Challenges of Cryptocurrency
@@ -27,8 +26,6 @@ Welcome to the **Learn Cryptocurrency** project! This webpage is a comprehensive
   - HTML5
   - CSS3 (with gradients and animations)
   - JavaScript for dynamic content
-- **Backend (Optional)**:
-  - APIs for live crypto price updates (e.g., CoinGecko, CoinMarketCap)
 - **Version Control**:
   - Git for tracking project progress
 - **Hosting**:
