@@ -1,105 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto-Basics</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600&family=Orbitron:wght@400;600&family=Monoton&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join! NST-SDC</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Glassmorphism */
+    .glass {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    /* Input hover focus */
+    .form-input {
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .form-input:focus {
+      box-shadow: 0 4px 15px rgba(153, 102, 255, 0.5);
+      transform: scale(1.02);
+    }
+    /* Button hover effects */
+    .button {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    /* Subtle animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fadeIn {
+      animation: fadeIn 1s ease-out;
+    }
+  </style>
+  <script>
+    // Limit Date of Birth to today or earlier
+    function setMinDOB() {
+      const today = new Date();
+      document.getElementById("DOB").setAttribute("max", today.toISOString().split('T')[0]);
+    }
+
+    // Redirect to home.html when "Log In" is clicked
+    function redirectToHome(event) {
+      event.preventDefault(); // Prevent form submission
+      window.location.href = "home.html"; // Redirect to home
+    }
+
+    // Redirect to Create Account page
+    function redirectToCreateAccount() {
+      window.location.href = "CreateAcc.html"; // Redirect to Create Account page
+    }
+  </script>
 </head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="logo">C₹ypto-Coder$</div>
-        <nav>
-            <ul>
-                <li><a href="#intro-content">Home</a></li>
-                <li><a href="#about-content">About</a></li>
-                <li><a href="#work-content">Work</a></li>
-                <li><a href="#future-content">Future</a></li>
-                <li><a href="#contact-content">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-gradient-to-br from-purple-900 via-indigo-700 to-violet-600 min-h-screen flex items-center justify-center text-white font-sans">
 
-    <!-- Introduction -->
-    <section class="hero" style="background-image: url('/image/cr1.jpg');" id="intro-content">
-        <div class="hero-content">
-            <h1>Understanding Cryptocurrency</h1>
-            <p class="highlight">A Beginner's Guide to Digital Currency</p>
-            <a href="/intro.html" class="btn">Start Learning</a>
+<!-- Background Gradient Overlay -->
+<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-black/20 to-black/40"></div>
+
+<!-- Cool Form Section -->
+<section class="relative z-10 flex items-center justify-center w-full px-4 fadeIn">
+  <div class="glass p-8 rounded-2xl shadow-2xl w-full sm:w-[500px]">
+    <h2 class="text-4xl font-bold text-center mb-6 text-white">Join NST-SDC</h2>
+    <p class="text-center text-gray-300 mb-8">Welcome! Fill out the form below to join our community.</p>
+
+    <form class="space-y-6">
+      <!-- Name -->
+      <div>
+        <label for="name" class="block text-sm font-medium">Name</label>
+        <div class="relative">
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required
+                 class="form-input w-full mt-2 py-3 px-4 rounded-lg bg-gray-700/60 text-white focus:ring-2 focus:ring-purple-400 focus:outline-none">
         </div>
-    </section>
+      </div>
 
-<!-- About Section -->
-<section class="hero" style="background-image: url('/image/cr2.jpg');" id="about-content">
-    <div class="hero-content">
-        <h1>What is Cryptocurrency?</h1>
-        <p class="highlight">Discover the foundation of digital currencies and how they revolutionize finance.</p>
-        <a href="/about.html" class="btn">Learn More</a>
-    </div>
+      <!-- Date of Birth -->
+      <div>
+        <label for="DOB" class="block text-sm font-medium">Date of Birth</label>
+        <div class="relative">
+          <input type="date" id="DOB" name="D.O.B" onfocus="setMinDOB()" required
+                 class="form-input w-full mt-2 py-3 px-4 rounded-lg bg-gray-700/60 text-white focus:ring-2 focus:ring-purple-400 focus:outline-none">
+        </div> 
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium">Email</label>
+        <div class="relative">
+          <input type="email" id="email" name="email" placeholder="Enter your email" required
+                 class="form-input w-full mt-2 py-3 px-4 rounded-lg bg-gray-700/60 text-white focus:ring-2 focus:ring-purple-400 focus:outline-none">
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label for="pass" class="block text-sm font-medium">Password</label>
+        <div class="relative">
+          <input type="password" id="pass" name="password" placeholder="Enter your password" required minlength="8"
+                 class="form-input w-full mt-2 py-3 px-4 rounded-lg bg-gray-700/60 text-white focus:ring-2 focus:ring-purple-400 focus:outline-none">
+          <small class="text-gray-400 text-xs block mt-1">Use at least 8 characters, including a number and a symbol.</small>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex justify-between space-x-4">
+        <!-- Log In Button -->
+        <button type="button" onclick="redirectToHome(event)"
+                class="button w-1/2 py-3 bg-indigo-500 rounded-lg hover:bg-indigo-600 transition-all">
+          Log In
+        </button>
+
+        <!-- Create Account Button -->
+        <button type="button" onclick="redirectToCreateAccount()"
+                class="button w-1/2 py-3 text-center bg-violet-500 rounded-lg hover:bg-violet-600 transition-all">
+          Create Acc.
+        </button>
+      </div>
+    </form>
+
+    <!-- Footer Note -->
+    <p class="text-center text-gray-400 text-sm mt-6">
+      By joining NST-SDC, you agree to our <a href="#" class="text-purple-400 underline">Terms & Conditions</a>.
+    </p>
+  </div>
 </section>
 
-<!-- Work Section -->
-<section class="hero" style="background-image: url('/image/cr3.jpg');" id="work-content">
-    <div class="hero-content">
-        <h1>How Does Cryptocurrency Work?</h1>
-        <p class="highlight">Dive into mining, blockchain, and wallets that power the crypto world.</p>
-        <a href="/work.html" class="btn">Explore</a>
-    </div>
-</section>
-
-
-    <!-- Future Section -->
-    <section class="hero" style="background-image: url('/image/cr4.jpg');" id="future-content">
-        <div class="hero-content">
-            <h1>Future of Cryptocurrency</h1>
-            <p class="highlight">Trends, Challenges, and Opportunities</p>
-            <a href="/future.html" class="btn">Discover More</a>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact-content">
-        <div class="cards-container">
-            <!-- Card 1 -->
-            <div class="person-card">
-                <img src="image/ar.jpg" alt="Arpit Sarang">
-                <h3>Arpit Sarang</h3>
-                <a href="https://codemaverick-143.github.io/My-Portfolio/" target="_blank">Portfolio</a>
-                <a href="https://github.com/CodeMaverick-143" target="_blank">Github</a>
-            </div>
-            <!-- Card 2 -->
-            <div class="person-card">
-                <img src="/image/gw.jpg" alt="Ganesh Wayal">
-                <h3>Ganesh Wayal</h3>
-                <a href="#portfolio" target="_blank">Portfolio</a>
-                <a href="https://github.com/ganesh3367" target="_blank">Github</a>
-            </div>
-            <!-- Card 3 -->
-            <div class="person-card">
-                <img src="image/pg.jpg" alt="Progyan Sen">
-                <h3>Progyan Sen</h3>
-                <a href="https://my-protfolio-liart.vercel.app/" target="_blank">Portfolio</a>
-                <a href="https://github.com/praggCode" target="_blank">Github</a>
-            </div>
-        </div>
-    </section>
-    
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2024 C₹ypto-Coder$ | All Rights Reserved</p>
-            <ul class="footer-links">
-                <li><a href="#intro-content">Home</a></li>
-                <li><a href="#about-content">About</a></li>
-                <li><a href="#work-content">Work</a></li>
-                <li><a href="#future-content">Future</a></li>
-                <li><a href="#contact-content">Contact</a></li>
-            </ul>
-        </div>
-    </footer>
-    
 </body>
 </html>
